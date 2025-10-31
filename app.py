@@ -9,3 +9,14 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     return app.send_static_file("index.html")
+
+@app.route("/sum/<int:a>")
+def sum(a):
+    b = 15
+    return f'This is a sum {b}'
+
+@app.route('/hello')
+def greeting():
+    print("HERE I AM HELLO")
+    return 'Hello, World'
+
